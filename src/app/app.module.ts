@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule }   from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -12,6 +13,7 @@ import { SplashComponent } from './splash/splash.component';
 import { PublicprofileComponent } from './publicprofile/publicprofile.component';
 import { MessageComponent } from './message/message.component';
 
+//Importing an array of routes from the ts file
 import { routes } from './services/routes';
 
 @NgModule({
@@ -28,7 +30,8 @@ import { routes } from './services/routes';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
