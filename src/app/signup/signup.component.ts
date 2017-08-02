@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FirebaseService } from '../services/auth.service';
 
 import { User } from '../models/user'
 
@@ -11,6 +12,7 @@ export class SignupComponent {
 	public errors = {email: "", pass: "", confpass: ""}; //This one is public so that angular can access it
 	model = {email: "", pass: "", confpass: ""}; //Model that angular will store data in
 	user: User; //User that we will send to the database
+	fbs: FirebaseService;
 
 	validate(){
 		this.errors = {email: "", pass: "", confpass: ""};
@@ -31,5 +33,10 @@ export class SignupComponent {
 		this.user = new User(this.model.email, this.model.pass); //Create a new user object with the model email and password
 		console.log(this.user);
 		//Pass the user to the db here
+		this.fbs.signup(this.user);
+	}
+
+	constructor(private firebase: FirebaseService){
+		this.fbs = firebase;
 	}
 }
