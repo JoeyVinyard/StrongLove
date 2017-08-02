@@ -8,6 +8,8 @@ import { User } from '../models/user'
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
+
+//TODO: Add the firebase rejections to validate
 export class SignupComponent {
 	public errors = {email: "", pass: "", confpass: ""}; //This one is public so that angular can access it
 	model = {email: "", pass: "", confpass: ""}; //Model that angular will store data in
@@ -34,9 +36,11 @@ export class SignupComponent {
 		console.log(this.user);
 		//Pass the user to the db here
 		this.fbs.signup(this.user);
+		console.log(this.fbs.isAuthed());
 	}
 
 	constructor(private firebase: FirebaseService){
 		this.fbs = firebase;
+		console.log(this.fbs.isAuthed());
 	}
 }
