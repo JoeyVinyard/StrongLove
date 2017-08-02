@@ -3,7 +3,7 @@
 	<form (ngSubmit)="onSubmit()" #signinForm="ngForm">
 		<div class="form-group">
 			<label for="email">Email</label>
-			<input type="text" class="form-control" id="email" id="email" name="email" [(ngModel)]="model.email">
+			<input type="text" class="form-control" id="email" name="email" [(ngModel)]="model.email">
 			<p *ngIf="errors.email" class="validation">{{errors.email}}</p>
 		</div>
 		<div class="form-group">

@@ -29,7 +29,7 @@ export class SigninComponent{
   	if(this.validate()){//If there are errors, do not submit the form
   		return;
   	}
-
+  	this.user = new User(this.model.email,this.model.pass);
   	this.fbs.signin(this.user);
   }
 
