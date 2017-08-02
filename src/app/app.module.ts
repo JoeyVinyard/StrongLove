@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule }   from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuth } from 'angularfire2/auth'
+
+import { firebaseConfig } from '../environments/firebase.config';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -12,6 +16,8 @@ import { MatchesComponent } from './matches/matches.component';
 import { SplashComponent } from './splash/splash.component';
 import { PublicprofileComponent } from './publicprofile/publicprofile.component';
 import { MessageComponent } from './message/message.component';
+
+import { FirebaseService } from './services/auth.service';
 
 //Importing an array of routes from the ts file
 import { routes } from './services/routes';
@@ -31,9 +37,13 @@ import { routes } from './services/routes';
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [
+    FirebaseService,
+    AngularFireAuth
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
