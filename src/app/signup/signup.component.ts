@@ -8,9 +8,9 @@ import { User } from '../models/user'
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-	user;
-	public errors = {email: "", pass: "", confpass: ""};
-	model = {email: "", pass: "", confpass: ""};
+	public errors = {email: "", pass: "", confpass: ""}; //This one is public so that angular can access it
+	model = {email: "", pass: "", confpass: ""}; //Model that angular will store data in
+	user: User; //User that we will send to the database
 
 	validate(){
 		this.errors = {email: "", pass: "", confpass: ""};
@@ -25,14 +25,11 @@ export class SignupComponent {
 		return(this.errors.email || this.errors.pass || this.errors.confpass); //Returns true if there are errors
 	}
 	onSubmit(){
-		console.log("Attempting to submit");
-		if(this.validate()){
-			console.log("Failed to submit, errors");
+		if(this.validate()){//If there are errors, do not submit the form
 			return;
 		}
-		this.user = new User(this.model.email, this.model.pass);
-		console.log(this.user.email, this.user.password);
-		console.log("submitted");
-		//Pass user to db
+		this.user = new User(this.model.email, this.model.pass); //Create a new user object with the model email and password
+		console.log(this.user);
+		//Pass the user to the db here
 	}
 }
