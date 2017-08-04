@@ -17,12 +17,20 @@ export class FirebaseService{
 		.catch((e) => {
 			console.log(e);
 		})
-		console.log(this.isAuthed());
 	}
 	signin(user: User){
 		this.af.auth.signInWithEmailAndPassword(user.email, user.password)
 		.then(() => {
 			this.router.navigateByUrl('/myprofile');
+		})
+		.catch((e) => {
+			console.log(e);
+		})
+	}
+	signout(){
+		this.af.auth.signOut()
+		.then(() => {
+			this.router.navigateByUrl('/');
 		})
 		.catch((e) => {
 			console.log(e);

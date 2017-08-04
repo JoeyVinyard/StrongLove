@@ -41,6 +41,5 @@ export class SignupComponent {
 
 	constructor(private firebase: FirebaseService){
 		this.fbs = firebase;
-		console.log(this.fbs.isAuthed());
 	}
 }

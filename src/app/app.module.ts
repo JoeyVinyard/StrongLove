@@ -18,6 +18,7 @@ import { PublicprofileComponent } from './publicprofile/publicprofile.component'
 import { MessageComponent } from './message/message.component';
 
 import { FirebaseService } from './services/auth.service';
+import { AuthGuard } from './services/auth-guard.service';
 
 //Importing an array of routes from the ts file
 import { routes } from './services/routes';
@@ -42,7 +43,8 @@ import { routes } from './services/routes';
   ],
   providers: [
     FirebaseService,
-    AngularFireAuth
+    AngularFireAuth,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
