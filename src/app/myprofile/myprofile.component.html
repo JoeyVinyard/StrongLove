@@ -2,11 +2,11 @@
 	<img src="" width="250px" height="250px">
 	<h2>
 		<input type="text" placeholder="Your Name">
-		<input type="submit" value="Save">
+		<button type="submit" class="btn btn-link">Save</button>
 	</h2>
 	<h3>
 		<input type="text" placeholder="Your Location">
-		<input type="submit" value="Save">
+		<button type="submit" class="btn btn-link">Save</button>
 	</h3>
 </header>
 <section>
@@ -15,7 +15,7 @@
 		<p>
 			<textarea rows="7" placeholder="Add info here..."></textarea>
 			<br>
-			<input type="submit" value="Save">
+			<button type="submit" class="btn btn-link">Save</button>
 		</p>
 	</div>
 	<div>
@@ -23,7 +23,7 @@
 		<p>
 			<textarea rows="3" placeholder="Add coding languages here..."></textarea>
 			<br>
-			<input type="submit" value="Save">
+			<button type="submit" class="btn btn-link">Save</button>
 		</p>
 	</div>
 	<div>
@@ -31,65 +31,7 @@
 		<p>
 			<textarea rows="5" placeholder="Add hobbies here..."></textarea>
 			<br>
-			<input type="submit" value="Save">
+			<button type="submit" class="btn btn-link">Save</button>
 		</p>
 	</div>
 </section>
-
-<!--
-<div [hidden]="submitted">
-	<h1>Your Profile</h1>
-	<img src="" width="250px" height="250px">
-	<form (ngSubmit)="onSubmit()" #profileForm="ngForm">
-		<div class="form-group">
-			<label for="name">Name</label>
-			<input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
-		</div>
-
-		<div class="form-group">
-			<label for="location">Location</label>
-			<input type="text" class="form-control" id="location" [(ngModel)]="model.location" name="location">
-		</div>
-
-		<div class="form-group">
-			<label for="about">About Me</label>
-			<input type="text" class="form-control" id="about" [(ngModel)]="model.about" name="about">
-		</div>
-
-		<div class="form-group">
-			<label for="languages">Coding Languages</label>
-			<input type="text" class="form-control" id="languages" [(ngModel)]="model.languages" name="languages">
-		</div>
-
-		<div class="form-group">
-			<label for="hobbies">Hobbies</label>
-			<input type="text" class="form-control" id="hobbies" [(ngModel)]="model.hobbies" name="hobbies">
-		</div>
-
-		<button type="submit" class="btn btn-success" [disabled]="!profileForm.form.valid">Submit</button>
-	</form>
-</div>
-<div [hidden]="!submitted">
-	<h2>You submitted the following:</h2>
-	<div class="row">
-		<div class="col-xs-3">Name</div>
-		<div class="col-xs-9 pull-left">{{ model.name }}</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-3">Location</div>
-		<div class="col-xs-9 pull-left">{{ model.location }}</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-3">About Me</div>
-		<div class="col-xs-9 pull-left">{{ model.about }}</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-3">Coding Languages</div>
-		<div class="col-xs-9 pull-left">{{ model.languages }}</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-3">Hobbies</div>
-		<div class="col-xs-9 pull-left">{{ model.hobbies }}</div>
-	</div>
-</div>
--->

@@ -14,10 +14,10 @@ section {
 }
 header img {
 	border-radius: 50%;
-	border: 3px solid #EBA0FF;
+	border: 3px solid #73437F;
 }
 h4 {
-	color: #EBA0FF;
+	color: #73437F;
 }
 input {
 	background-color: #F5D2FF;
@@ -26,13 +26,3 @@ input {
 input::placeholder {
 	color: #73437F;
 }
-
-/*
-.ng-valid[required], .ng-valid.required {
-	border-left: 5px solid #42A948;
-}
-
-.ng-invalid:not(form) {
-	border-left: 5px solid #a94442;
-}
-*/
