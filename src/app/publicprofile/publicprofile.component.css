@@ -13,6 +13,10 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+.h3, h3 {
+    font-size: 18px;
+}
 .card.hovercard {
     position: relative;
     padding-top: 0;
@@ -81,3 +85,34 @@
     -webkit-border-radius:0 !important;
 }
 
+.btn{
+    font-size: 18px;
+}
+
+.btn-primary {
+    color: #fff;
+    border-color: rgba(115, 67, 127, 0.17) !important;
+    background-color: #c4a8cc !important;
+}
+
+.btn-primary:active {
+    color: #fff !important;
+    border-color: rgba(115, 67, 127, 0.17) !important;
+    background-color: #c4a8cc !important;
+}
+.btn-primary:target {
+    color: #fff !important;
+    border-color: rgba(115, 67, 127, 0.17) !important;
+    background-color: #c4a8cc !important;
+}
+.btn-primary:focus {
+    color: #fff !important;
+    border-color: rgba(115, 67, 127, 0.17) !important;
+    background-color: #c4a8cc !important;
+}
+
+.btn-primary:hover {
+    color: #fff !important;
+    border-color: rgba(115, 67, 127, 0.17) !important;
+    background-color: #c4a8cc !important;
+}
