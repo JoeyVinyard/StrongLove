@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-myprofile',
   templateUrl: './myprofile.component.html',
   styleUrls: ['./myprofile.component.css']
 })
-export class MyprofileComponent implements OnInit {
+export class MyprofileComponent{
+	model = {name: "", city: "", about: "", langs: "", hobbies: ""};
 
-  constructor() { }
+	onSubmit(){
+		console.log(this.model);
+	}
 
-  ngOnInit() {
-  }
-
+	constructor() { }
 }

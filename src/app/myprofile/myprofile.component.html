@@ -1,37 +1,24 @@
-<header>
+<form (ngSubmit)="onSubmit()" #signupForm="ngForm">
 	<img src="" width="250px" height="250px">
-	<h2>
-		<input type="text" placeholder="Your Name">
-		<button type="submit" class="btn btn-link">Save</button>
-	</h2>
-	<h3>
-		<input type="text" placeholder="Your Location">
-		<button type="submit" class="btn btn-link">Save</button>
-	</h3>
-</header>
-<section>
-	<div>
-		<h4>About Me</h4>
-		<p>
-			<textarea rows="7" placeholder="Add info here..."></textarea>
-			<br>
-			<button type="submit" class="btn btn-link">Save</button>
-		</p>
+	<div class="form-group">
+		<label for="name">Name</label>
+		<input id="name" name="name" type="text" placeholder="Your Name" [(ngModel)]="model.name">
 	</div>
-	<div>
-		<h4>Coding Languages</h4>
-		<p>
-			<textarea rows="3" placeholder="Add coding languages here..."></textarea>
-			<br>
-			<button type="submit" class="btn btn-link">Save</button>
-		</p>
+	<div class="form-group">
+		<label for="city">City</label>
+		<input id="city" name="city" type="text" placeholder="City" [(ngModel)]="model.city">
 	</div>
-	<div>
-		<h4>Hobbies</h4>
-		<p>
-			<textarea rows="5" placeholder="Add hobbies here..."></textarea>
-			<br>
-			<button type="submit" class="btn btn-link">Save</button>
-		</p>
+	<div class="form-group">
+		<label for="about">About Me</label>
+		<textarea id="about" name="about" rows="7" placeholder="Add info here..." [(ngModel)]="model.about"></textarea>
 	</div>
-</section>
+	<div class="form-group">
+		<label for="langs">Programming Languages</label>
+		<textarea id="langs" name="langs" rows="3" placeholder="Add coding languages here..." [(ngModel)]="model.langs"></textarea>
+	</div>
+	<div class="form-group">
+		<label for="hobbies">Hobbies</label>
+		<textarea id="hobbies" name="hobbies" rows="5" placeholder="Add hobbies here..." [(ngModel)]="model.hobbies"></textarea>		
+	</div>
+	<button type="submit" class="btn btn-link">Save</button>
+</form>
