@@ -6,6 +6,8 @@ import { SplashComponent } from '../splash/splash.component';
 import { PublicprofileComponent } from '../publicprofile/publicprofile.component';
 import { MessageComponent } from '../message/message.component';
 
+import { AuthGuard } from './auth-guard.service';
+
 export const routes = [
 	{
         path: 'signin',
@@ -17,15 +19,18 @@ export const routes = [
       },
       {
       	path: 'myprofile',
-          component: MyprofileComponent
+          component: MyprofileComponent,
+          canActivate: [AuthGuard]
      },
      {
         path: 'user',
-        component: PublicprofileComponent
+        component: PublicprofileComponent,
+        canActivate: [AuthGuard]
      },
      {
         path: 'message',
-        component: MessageComponent
+        component: MessageComponent,
+        canActivate: [AuthGuard]
      },
      {
         path: '',
@@ -33,6 +38,7 @@ export const routes = [
      },
      {
        path: 'matches',
-       component: MatchesComponent
+       component: MatchesComponent,
+       canActivate: [AuthGuard]
      }
 ]
