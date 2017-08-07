@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./myprofile.component.css']
 })
 export class MyprofileComponent{
+	model = {name: "", city: "", about: "", langs: "", hobbies: ""};
 
 	constructor() { }
 }
