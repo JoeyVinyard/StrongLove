@@ -1,0 +1,28 @@
+header {
+	text-align: center;
+}
+textarea {
+	width: 500px;
+	background-color: #F5D2FF;
+	color: #73437F;
+}
+textarea::placeholder {
+	color: #73437F;
+}
+section {
+	text-align: center;
+}
+header img {
+	border-radius: 50%;
+	border: 3px solid #73437F;
+}
+h4 {
+	color: #73437F;
+}
+input {
+	background-color: #F5D2FF;
+	color: #73437F;
+}
+input::placeholder {
+	color: #73437F;
+}

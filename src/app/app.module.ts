@@ -22,6 +22,7 @@ import { AuthGuard } from './services/auth-guard.service';
 
 //Importing an array of routes from the ts file
 import { routes } from './services/routes';
+import { CreateprofileComponent } from './createprofile/createprofile.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { routes } from './services/routes';
     MatchesComponent,
     SplashComponent,
     PublicprofileComponent,
-    MessageComponent
+    MessageComponent,
+    CreateprofileComponent
   ],
   imports: [
     BrowserModule,

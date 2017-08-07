@@ -6,11 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./myprofile.component.css']
 })
 export class MyprofileComponent{
-	model = {name: "", city: "", about: "", langs: "", hobbies: ""};
-
-	onSubmit(){
-		console.log(this.model);
-	}
 
 	constructor() { }
 }
