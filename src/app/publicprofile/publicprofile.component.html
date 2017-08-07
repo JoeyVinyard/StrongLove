@@ -40,10 +40,20 @@
           <h3>{{modelProfile.about}}</h3>
         </div>
         <div class="tab-pane fade in" id="tab2">
-          <h3>{{modelProfile.hobbies}}</h3>
+          <!-- <h3 ngFor="let hobby of hobbies">{{hobby}}</h3> -->
+          <ul>
+              <li *ngFor="let hobby of hobbies">
+                {{ hobby }}
+                </li>
+            </ul>
         </div>
         <div class="tab-pane fade in" id="tab3">
-          <h3>{{modelProfile.langs}}</h3>
+          <!-- <h3>{{modelProfile.langs}}</h3> -->
+          <ul>
+              <li *ngFor="let lang of langs">
+                {{ lang }}
+                </li>
+            </ul>
         </div>
       </div>
     </div>
