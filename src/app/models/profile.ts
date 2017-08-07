@@ -3,8 +3,8 @@ export class Profile{
 					public name: string,
 					public gender: string,
 					public about: string,
-					public hobbies: string,
+					public hobbies: string[],
 					public age: number,
-					public langs: string,
+					public langs: string[],
 					public prefgender: string){}
 }

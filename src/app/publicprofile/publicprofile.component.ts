@@ -9,7 +9,7 @@ import { Profile } from '../models/profile'
   styleUrls: ['./publicprofile.component.css']
 })
 export class PublicprofileComponent {
-     modelProfile = new Profile("","","","","",0,"","");
+     modelProfile = new Profile("","","","",[""],0,[""],"");
 	activeId = 1;
 
 	change(id: number){
