@@ -4,6 +4,7 @@ import { RouterModule }   from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth'
+import { AngularFireDatabase } from 'angularfire2/database';
 
 import { firebaseConfig } from '../environments/firebase.config';
 
@@ -19,6 +20,7 @@ import { MessageComponent } from './message/message.component';
 
 import { FirebaseService } from './services/auth.service';
 import { AuthGuard } from './services/auth-guard.service';
+import { UsersService } from './services/users.service';
 
 //Importing an array of routes from the ts file
 import { routes } from './services/routes';
@@ -46,6 +48,8 @@ import { CreateprofileComponent } from './createprofile/createprofile.component'
   providers: [
     FirebaseService,
     AngularFireAuth,
+    AngularFireDatabase,
+    UsersService,
     AuthGuard
   ],
   bootstrap: [AppComponent]

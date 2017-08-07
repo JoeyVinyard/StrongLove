@@ -1,24 +1,52 @@
-<form (ngSubmit)="onSubmit()" #signupForm="ngForm">
-	<img src="" width="250px" height="250px">
-	<div class="form-group">
-		<label for="name">Name</label>
-		<input id="name" name="name" type="text" placeholder="Your Name" [(ngModel)]="model.name">
+<form class="formCont" (ngSubmit)="onSubmit()" #signupForm="ngForm">
+	<h1>Create Profile</h1>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="username">Username</label>
+				<input type="text" class="form-control" id="username" name="username" [(ngModel)]="model.username">
+			</div>
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name">
+			</div>
+			<div class="form-group">
+				<label for="gender">Gender</label>
+				<select class="form-control" id="gender" name="gender" [(ngModel)]="model.gender">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="prefgender">Preferred Gender</label>
+				<select class="form-control" id="prefGender" name="prefGender" [(ngModel)]="model.prefGender">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="age">Age</label>
+				<input type="number" class="form-control" id="age" name="age" [(ngModel)]="model.age">
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="city">city</label>
+				<input type="text" class="form-control" id="city" name="city" [(ngModel)]="model.city">
+			</div>
+			<div class="form-group">
+				<label for="about">About</label>
+				<input type="text" class="form-control" id="about" name="about" [(ngModel)]="model.about">
+			</div>
+			<div class="form-group">
+				<label for="langs">Languages</label>
+				<input type="text" class="form-control" id="langs" name="langs" [(ngModel)]="model.langs">
+			</div>
+			<div class="form-group">
+				<label for="hobbies">Hobbies</label>
+				<input type="text" class="form-control" id="hobbies" name="hobbies" [(ngModel)]="model.hobbies">
+			</div>
+		</div>
 	</div>
-	<div class="form-group">
-		<label for="city">City</label>
-		<input id="city" name="city" type="text" placeholder="City" [(ngModel)]="model.city">
-	</div>
-	<div class="form-group">
-		<label for="about">About Me</label>
-		<textarea id="about" name="about" rows="7" placeholder="Add info here..." [(ngModel)]="model.about"></textarea>
-	</div>
-	<div class="form-group">
-		<label for="langs">Programming Languages</label>
-		<textarea id="langs" name="langs" rows="3" placeholder="Add coding languages here..." [(ngModel)]="model.langs"></textarea>
-	</div>
-	<div class="form-group">
-		<label for="hobbies">Hobbies</label>
-		<textarea id="hobbies" name="hobbies" rows="5" placeholder="Add hobbies here..." [(ngModel)]="model.hobbies"></textarea>		
-	</div>
-	<button type="submit" class="btn btn-link">Save</button>
+	<button type="submit" class="btn btn-success">Submit</button>
 </form>
