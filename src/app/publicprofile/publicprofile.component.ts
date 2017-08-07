@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../services/users.service'
+
+import { Profile } from '../models/profile'
 
 @Component({
   selector: 'app-publicprofile',
@@ -12,9 +15,10 @@ export class PublicprofileComponent implements OnInit {
 		console.log("changing to: ", id);
 		this.activeId = id;
 	}
-  constructor() { }
+  constructor(private us: UsersService) { }
 
   ngOnInit() {
+    console.log(this.us.getUserInfo("bobbert"))
   }
 
 }
