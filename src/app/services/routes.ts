@@ -25,8 +25,8 @@ export const routes = [
      },
      {
         path: 'user',
-        component: PublicprofileComponent,
-        canActivate: [AuthGuard]
+        component: PublicprofileComponent
+        // canActivate: [AuthGuard]
      },
      {
         path: 'message',
