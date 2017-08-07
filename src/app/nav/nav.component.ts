@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FirebaseService } from '../services/auth.service';
 
 @Component({
   selector: 'navbar',
@@ -8,14 +7,4 @@ import { FirebaseService } from '../services/auth.service';
 })
 export class NavComponent {
 	title = "<strong>Love</strong>"
-	authed(){
-		console.log("test");
-		return this.fbs.isAuthed();
-	}
-	signout(){
-		this.fbs.signout();
-	}
-	constructor(private fbs: FirebaseService){
-
-	}
 }

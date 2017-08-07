@@ -10,12 +10,9 @@
       <a class="navbar-brand" href="#">{{title}}</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul *ngIf="!authed()" class="nav navbar-nav navbar-right">
-		<li><a routerLink="/signup">Sign Up</a></li>
-		<li><a routerLink="/signin">Sign In</a></li>
-      </ul>
-      <ul *ngIf="authed()" class="nav navbar-nav navbar-right">
-        <li><a href="#" (click)="signout()">Sign Out</a></li>
+      <ul class="nav navbar-nav navbar-right">
+		<li><a href="#">Sign Up</a></li>
+		<li><a href="#">Sign In</a></li>
       </ul>
     </div>
   </div>

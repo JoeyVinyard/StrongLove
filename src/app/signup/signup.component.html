@@ -1,21 +1,3 @@
-<div class="col-sm-4 col-sm-offset-4">
-	<h1>Sign Up</h1>
-	<form (ngSubmit)="onSubmit()" #signupForm="ngForm">
-		<div class="form-group">
-			<label for="email">Email</label>
-			<input type="text" class="form-control" id="email" id="email" name="email" [(ngModel)]="model.email">
-			<p *ngIf="errors.email" class="validation">{{errors.email}}</p>
-		</div>
-		<div class="form-group">
-			<label for="password">Password</label>
-			<input type="password" class="form-control" id="password" name="pass" [(ngModel)]="model.pass">
-			<p *ngIf="errors.pass" class="validation">{{errors.pass}}</p>
-		</div>
-		<div class="form-group">
-			<label for="confpass">Confirm Password</label>
-			<input type="password" class="form-control" id="confpass" name="confpass" [(ngModel)]="model.confpass">
-			<p *ngIf="errors.confpass">{{errors.confpass}}</p>
-		</div>
-		<button type="submit" class="btn btn-success">Submit</button>
-	</form>
-</div>
+<p>
+  signup works!
+</p>
