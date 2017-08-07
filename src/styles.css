@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-.main-content{
-	padding-top: 60px;
+
+@font-face {
+font-family: 'Roboto Condensed';
+	src: url('./assets/RobotoCondensed.ttf') format('truetype');
+	font-weight: bold;
+}
+
+body{
+	background-image: url("./assets/img/background.png");
+}
+h1{
+	color: #73437F;
 }

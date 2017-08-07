@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
 import { FirebaseService } from '../services/auth.service';
 
-import { User } from '../models/user'
+import { User } from '../models/user';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+	selector: 'app-splash',
+	templateUrl: './splash.component.html',
+	styleUrls: ['./splash.component.css']
 })
 
-//TODO: Add the firebase rejections to validate
-export class SignupComponent {
-	public errors = {email: "", pass: "", confpass: ""}; //This one is public so that angular can access it
-	model = {email: "", pass: "", confpass: ""}; //Model that angular will store data in
-	user: User; //User that we will send to the database
-	fbs: FirebaseService;
+export class SplashComponent{
+	user: User;
+	errors= {email: "", pass: "", confpass: ""}
+	model= {email: "", pass: "", confpass: ""}
 
 	validate(){
 		this.errors = {email: "", pass: "", confpass: ""};
@@ -39,7 +37,5 @@ export class SignupComponent {
 		console.log(this.fbs.isAuthed());
 	}
 
-	constructor(private firebase: FirebaseService){
-		this.fbs = firebase;
-	}
+	constructor(private fbs: FirebaseService) { }
 }
