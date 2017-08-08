@@ -26,6 +26,12 @@ export class SplashComponent{
 			this.errors.confpass="Passwords must match";
 		return(this.errors.email || this.errors.pass || this.errors.confpass); //Returns true if there are errors
 	}
+
+	authed(){
+		
+		return this.fbs.isAuthed();
+	}
+	
 	onSubmit(){
 		if(this.validate()){//If there are errors, do not submit the form
 			return;
