@@ -14,5 +14,7 @@ export class UsersService{
 			return s.val();
 		});
 	}
+
+	
 	constructor(private afd: AngularFireDatabase, private router: Router){}
 }
