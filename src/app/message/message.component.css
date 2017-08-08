@@ -1,0 +1,60 @@
+h1 {
+	margin-left: 25px;
+}
+.sidebar {
+	width: 350px;
+	height: 650px;
+	margin-left: 25px;
+	float: left;
+	background-color: #73437F;
+	border: 2px solid black;
+	border-radius: 2.0em;
+}
+img {
+	float: left;
+	margin-left: 25px;
+	margin-top: 25px;
+	border: 1.5px solid black;
+	border-radius: 50%;
+}
+h4 {
+	float: center;
+	text-align: center;
+	margin-top: 55px;
+}
+h3 {
+	color: #EBA0FF;
+	margin-left: 25px;
+}
+.main {
+	float: center;
+	margin-left: 400px;
+	width: 1000px;
+	height: 650px;
+	background-color: #73437F;
+	border: 2px solid black;
+	border-radius: 2.0em;
+}
+.chatarea {
+	margin-left: 25px;
+	margin-right: 25px;
+	height: 540px;
+	background-color: #F5D2FF;
+	border: 2px solid black;
+	border-radius: 1.5em;
+}
+input {
+	float: left;
+	margin-left: 50px;
+	margin-top: 10px;
+	width: 800px;
+	height: 30px;
+	border: 1px solid black;
+	border-radius: 0.5em;
+	background-color: #F5D2FF;
+}
+button {
+	float: center;
+	margin-left: 15px;
+	margin-top: 10px;
+}

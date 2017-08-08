@@ -31,7 +31,7 @@ export const routes = [
      {
         path: 'message',
         component: MessageComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
      },
      {
         path: '',
