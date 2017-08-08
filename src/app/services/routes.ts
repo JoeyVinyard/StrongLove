@@ -20,11 +20,11 @@ export const routes = [
       },
       {
       	path: 'myprofile',
-          component: MyprofileComponent,
-          canActivate: [AuthGuard]
+          component: MyprofileComponent//,
+          //canActivate: [AuthGuard]
      },
      {
-        path: 'user',
+        path: 'user/:id',
         component: PublicprofileComponent
         // canActivate: [AuthGuard]
      },
@@ -40,7 +40,7 @@ export const routes = [
      {
        path: 'matches',
        component: MatchesComponent,
-       canActivate: [AuthGuard]
+       // canActivate: [AuthGuard]
      },
      {
        path: 'createprofile',

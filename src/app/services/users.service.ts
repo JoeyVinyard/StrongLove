@@ -9,5 +9,12 @@ export class UsersService{
 	createUser(p: Profile){
 		this.afd.database.ref('users/' + p.username).set(p)
 	}
+	getUserInfo(username: string){
+		return this.afd.database.ref('users/' + username).once('value').then(function(s) {
+			return s.val();
+		});
+	}
+
+	
 	constructor(private afd: AngularFireDatabase, private router: Router){}
 }

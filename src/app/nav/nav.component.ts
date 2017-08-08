@@ -9,7 +9,7 @@ import { FirebaseService } from '../services/auth.service';
 export class NavComponent {
 	title = "<strong>Love</strong>"
 	authed(){
-		console.log("test");
+		
 		return this.fbs.isAuthed();
 	}
 	signout(){
