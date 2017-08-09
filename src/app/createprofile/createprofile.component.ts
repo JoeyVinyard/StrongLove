@@ -10,11 +10,14 @@ import { Profile } from '../models/profile'
   styleUrls: ['./createprofile.component.css']
 })
 export class CreateprofileComponent{
+	//TODO: Substitute for any later on
 	model = {username: "", name: "", gender: "", prefGender: "", age: 0, city: "", about: "", langs: [""], hobbies: [""]};
+	//Langs and hobbies are intermediary variables that we use in the split() function
 	langs = "";
 	hobbies = "";
 
 	split(){
+		//Splits the strings into arrays so we can store them as such in firebase
 		this.model.hobbies = this.hobbies.split(" ");
 		this.model.langs = this.langs.split(" ");
 	}

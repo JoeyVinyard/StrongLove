@@ -10,5 +10,9 @@ import { Router } from '@angular/router';
 export class MyprofileComponent{
 	model = {name: "", city: "", about: "", langs: "", hobbies: ""};
 
-	
+	//Add constructor for any services we will need
+	//Add the imports for services you use etc.
+	//Add function to handle toggling of edit/view
+	//Add function for submitting data 
+	//In our users.service, add a function for putting instead of just setting
 }

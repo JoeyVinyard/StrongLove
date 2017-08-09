@@ -1,4 +1,4 @@
-<form class="formCont" (ngSubmit)="onSubmit()" #signupForm="ngForm">
+<form class="formCont" (ngSubmit)="onSubmit()" #createForm="ngForm">
 	<h1>Create Profile</h1>
 	<div class="row">
 		<div class="col-sm-6">
@@ -40,6 +40,7 @@
 			</div>
 			<div class="form-group">
 				<label for="langs">Languages</label>
+<!-- 				ngModelChange gets called whenever there is a change in the input -->
 				<input type="text" class="form-control" id="langs" name="langs" (ngModelChange)="split()" [(ngModel)]="langs">
 			</div>
 			<div class="form-group">
