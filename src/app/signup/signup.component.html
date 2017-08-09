@@ -1,9 +1,12 @@
 <div class="col-sm-4 col-sm-offset-4">
 	<h1>Sign Up</h1>
+<!-- 	ngSubmit binds what function will be called when the submit button is pressed -->
 	<form (ngSubmit)="onSubmit()" #signupForm="ngForm">
 		<div class="form-group">
 			<label for="email">Email</label>
+<!-- 			ngModel is the two way data binding. Changes made in the dom will affect the controller, and vice versa -->
 			<input type="text" class="form-control" id="email" id="email" name="email" [(ngModel)]="model.email">
+<!-- 			ngIf  is an if statement for showing the item -->
 			<p *ngIf="errors.email" class="validation">{{errors.email}}</p>
 		</div>
 		<div class="form-group">

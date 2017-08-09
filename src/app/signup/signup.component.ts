@@ -11,13 +11,12 @@ import { User } from '../models/user'
 
 //TODO: Add the firebase rejections to validate
 export class SignupComponent {
-	public errors = {email: "", pass: "", confpass: ""}; //This one is public so that angular can access it
-	model = {email: "", pass: "", confpass: ""}; //Model that angular will store data in
+	public errors: any = {}; //This one is public so that angular can access it
+	model: any = {}; //Model that angular will store data in
 	user: User; //User that we will send to the database
-	fbs: FirebaseService;
 
 	validate(){
-		this.errors = {email: "", pass: "", confpass: ""};
+		this.errors = {};
 		if(!this.model.email)
 			this.errors.email="Please provide an email";
 		if(!this.model.pass)
@@ -33,13 +32,8 @@ export class SignupComponent {
 			return;
 		}
 		this.user = new User(this.model.email, this.model.pass); //Create a new user object with the model email and password
-		console.log(this.user);
 		//Pass the user to the db here
-		this.fbs.signup(this.user);
-		console.log(this.fbs.isAuthed());
+		this.authService.signup(this.user);
 	}
-
-	constructor(private firebase: FirebaseService){
-		this.fbs = firebase;
-	}
+	constructor(private authService: FirebaseService){}
 }

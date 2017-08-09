@@ -12,26 +12,20 @@ import { Profile } from '../models/profile'
 export class PublicprofileComponent {
      modelProfile = new Profile("","","","",[""],0,[""],"");
 	activeId = 1;
-  hobbies = [];
-  langs = [];
-  // goToUser(username){
-  //   this.router.navigate(['/user', username])
-  // }
+     hobbies = [];
+     langs = [];
 
 	change(id: number){
 		console.log("changing to: ", id);
 		this.activeId = id;
 	}
-  constructor(private route: ActivatedRoute, private router: Router, private us: UsersService) {
-    this.route.params.subscribe((params) => {
-        this.us.getUserInfo(params.id).then((prof) => {
-        this.modelProfile = new Profile(prof.username, prof.name, prof.gender, prof.about, prof.hobbies, prof.age, prof.langs, prof.prefgender);
-        this.hobbies = prof.hobbies;
-        this.langs = prof.langs;
+    constructor(private route: ActivatedRoute, private router: Router, private us: UsersService) {
+      this.route.params.subscribe((params) => {
+          this.us.getUserInfo(params.id).then((prof) => {
+            this.modelProfile = new Profile(prof.username, prof.name, prof.gender, prof.about, prof.hobbies, prof.age, prof.langs, prof.prefgender);
+            this.hobbies = prof.hobbies;
+            this.langs = prof.langs;
+        })
       })
-    })
-    
-
-    
   }
 }
