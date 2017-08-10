@@ -10,7 +10,7 @@ import { Profile } from '../models/profile'
   styleUrls: ['./publicprofile.component.css']
 })
 export class PublicprofileComponent {
-     modelProfile = new Profile("","","","",[""],0,[""],"");
+     modelProfile: any = {};
 	activeId = 1;
      hobbies = [];
      langs = [];
@@ -22,7 +22,8 @@ export class PublicprofileComponent {
     constructor(private route: ActivatedRoute, private router: Router, private us: UsersService) {
       this.route.params.subscribe((params) => {
           this.us.getUserInfo(params.id).then((prof) => {
-            this.modelProfile = new Profile(prof.username, prof.name, prof.gender, prof.about, prof.hobbies, prof.age, prof.langs, prof.prefgender);
+            //todo replace blank string
+            this.modelProfile = new Profile("", prof.username, prof.name, prof.gender, prof.about, prof.hobbies, prof.age, prof.langs, prof.prefgender);
             this.hobbies = prof.hobbies;
             this.langs = prof.langs;
         })

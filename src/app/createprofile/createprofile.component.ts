@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { UsersService } from '../services/users.service'
+import { FirebaseService } from '../services/auth.service';
 
 import { Profile } from '../models/profile'
 
@@ -10,8 +11,7 @@ import { Profile } from '../models/profile'
   styleUrls: ['./createprofile.component.css']
 })
 export class CreateprofileComponent{
-	//TODO: Substitute for any later on
-	model = {username: "", name: "", gender: "", prefGender: "", age: 0, city: "", about: "", langs: [""], hobbies: [""]};
+	model: any = {};
 	//Langs and hobbies are intermediary variables that we use in the split() function
 	langs = "";
 	hobbies = "";
@@ -22,8 +22,9 @@ export class CreateprofileComponent{
 		this.model.langs = this.langs.split(" ");
 	}
 	onSubmit(){
-		this.us.createUser(new Profile(this.model.username, this.model.name, this.model.gender, this.model.about, this.model.hobbies, this.model.age, this.model.langs, this.model.prefGender));
+		//TODO replace blank string
+		this.us.createUser(new Profile(this.as.getUid(), this.model.username, this.model.name, this.model.gender, this.model.about, this.model.hobbies, this.model.age, this.model.langs, this.model.prefGender));
 	}
 
-	constructor(private us: UsersService) { }
+	constructor(private us: UsersService, private as: FirebaseService) { }
 }

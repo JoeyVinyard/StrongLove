@@ -1,5 +1,6 @@
 export class Profile{
-	constructor(public username: string,
+	constructor(public uid: string,
+					public username: string,
 					public name: string,
 					public gender: string,
 					public about: string,

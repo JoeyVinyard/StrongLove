@@ -43,5 +43,5 @@ export class SplashComponent{
 		console.log(this.fbs.isAuthed());
 	}
 
-	constructor(private fbs: FirebaseService) { }
+	constructor(private fbs: FirebaseService) {}
 }

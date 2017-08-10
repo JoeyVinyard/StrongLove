@@ -8,9 +8,15 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class UsersService{
 	createUser(p: Profile){
 		this.afd.database.ref('users/' + p.username).set(p)
-		//then
+		.then(() => {
+			this.router.navigateByUrl('/myprofile');
+		})
+		.catch((error) => {
+			console.log(error);
+		})
 		//catch
 		//TODO: Add promise here to catch for errors, and to redirect to matches or something
+
 	}
 	getUserInfo(username: string){
 		//Returns promise with the snapshot of the user data
@@ -18,6 +24,7 @@ export class UsersService{
 			return s.val();
 		});
 	}
+
 
 	
 	constructor(private afd: AngularFireDatabase, private router: Router){}

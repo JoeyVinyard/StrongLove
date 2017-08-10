@@ -3,10 +3,13 @@ import { User } from '../models/user';
 
 import { Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireDatabase } from 'angularfire2/database';
+
 
 @Injectable()
 export class FirebaseService{
 	authState;
+	uid;
 
 	signup(user: User){
 		//Uses angularfire2 to create the user with the email and password from the User object
@@ -40,11 +43,35 @@ export class FirebaseService{
 		//Returns the authstate
 		return !!this.authState; //Double bang is so that null becomes false
 	}
-	constructor(private af: AngularFireAuth, private router: Router){
+
+	getUid(){
+		return this.uid;
+	}
+
+	queryByUser(uid, callback, comp){
+			// var queryResult = []	
+			// var self = this
+			// this..database.ref('/users').orderByChild('uid').equalTo(userId).on("value", function(snapshot){
+			// 	console.log(snapshot.val())
+			// 	callback(snapshot.val())
+			// })
+			console.log(uid);
+			this.afd.database.ref('/users').orderByChild('uid').equalTo(uid).on("value", function(snapshot){
+				console.log(snapshot.val())
+				var key = Object.keys(snapshot.val())[0]
+				console.log(key);
+				callback(snapshot.val()[key], comp);
+			})
+	}
+	
+	constructor(private afd: AngularFireDatabase, private af: AngularFireAuth, private router: Router){
 		//Subscribe to the firebase authentications tate
 		this.af.authState.subscribe((authState) => {
 			//Sets our class variable authstate to the authstate provided by angularfire
 			this.authState = authState
+		})
+		this.af.auth.onAuthStateChanged((authData) => {
+			this.uid=authData.uid;
 		})
 	}
 }
