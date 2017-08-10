@@ -23,7 +23,7 @@ export class MyprofileComponent{
 	//In our users.service, add a function for putting instead of just setting
 	setUser(prof, comp){
 		console.log(prof, comp);
-		comp.model = new Profile(prof.uid, prof.username, prof.name, prof.gender, prof.about, prof.hobbies, prof.age, prof.langs, prof.prefgender);
+		comp.model = new Profile(prof.uid, prof.username, prof.name, prof.gender, prof.imglink, prof.about, prof.city, prof.hobbies, prof.age, prof.langs, prof.prefgender);
 		
 	}
 
