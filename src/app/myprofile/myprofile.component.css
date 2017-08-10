@@ -1,14 +1,14 @@
 div .form-group {
 	text-align: center;
+  color: #73437F;
 }
 
-.center-div
-{
+.center-div {
   margin: auto;
   top: 0;
-  right: 0;
   bottom: 0;
   left: 0;
+  right: 0;
   width: 150px;
   height: 150px;
   background-color: transparent;
@@ -17,4 +17,10 @@ div .form-group {
 
 .profpic{
 	border-radius: 50%;
+}
+
+.container {
+  background-color: rgba(222, 201, 228, 0.48);
+  border-radius: 5%;
+  border: 2px solid #73437F;
 }

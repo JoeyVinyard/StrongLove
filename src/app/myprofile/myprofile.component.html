@@ -37,9 +37,9 @@
 
 
 
-	<div class="container">
+	<div *ngIf=editing() class="container">
 		
-	<form *ngIf=editing() class="formCont" (ngSubmit)="onSubmit()" #createForm="ngForm">
+	<form class="formCont" (ngSubmit)="onSubmit()" #createForm="ngForm">
 		<h1>Update</h1>
 		<div class="row">
 			<div class="col-sm-6">
