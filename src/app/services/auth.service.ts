@@ -10,6 +10,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class FirebaseService{
 	authState;
 	uid;
+	authed;
 
 	signup(user: User){
 		//Uses angularfire2 to create the user with the email and password from the User object
@@ -22,13 +23,16 @@ export class FirebaseService{
 		})
 	}
 	signin(user: User){
-		this.af.auth.signInWithEmailAndPassword(user.email, user.password)
-		.then(() => {
-			this.router.navigateByUrl('/myprofile');
+		this.af.auth.setPersistence('local').then(() => {
+			this.af.auth.signInWithEmailAndPassword(user.email, user.password)
+			.then(() => {
+				this.router.navigateByUrl('/myprofile');
+			})
+			.catch((error) => {
+				console.log(error);
+			})
 		})
-		.catch((error) => {
-			console.log(error);
-		})
+		
 	}
 	signout(){
 		this.af.auth.signOut()
@@ -43,7 +47,6 @@ export class FirebaseService{
 		//Returns the authstate
 		return !!this.authState; //Double bang is so that null becomes false
 	}
-
 	getUid(){
 		return this.uid;
 	}
