@@ -39,6 +39,11 @@
 				<input type="text" class="form-control" id="about" name="about" [(ngModel)]="model.about">
 			</div>
 			<div class="form-group">
+				<label for="imglink">Link for Profile Picture</label>
+				<input type="text" class="form-control" id="imglink" name="imglink" [(ngModel)]="model.imglink">
+			</div>
+
+			<div class="form-group">
 				<label for="langs">Languages</label>
 <!-- 				ngModelChange gets called whenever there is a change in the input -->
 				<input type="text" class="form-control" id="langs" name="langs" (ngModelChange)="split()" [(ngModel)]="langs">
