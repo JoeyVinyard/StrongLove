@@ -1,12 +1,15 @@
 <!-- When we click the edit button, substitute this page with a form with the fields filled with our info -->
 <!-- Use ngIf here based on a boolean that gets toggled in the controller -->
-<div>
+<div class="container" *ngIf=!editing()>
 	<div class="center-div">
 		<img src="{{model.imglink}}" class="profpic" width="150px" height="150px">
 		
 	</div>
 	<div class="form-group">
 		<h2>Name: {{model.name}}</h2>
+	</div>
+	<div class="form-group">
+		<h3>Username: {{model.username}}</h3>
 	</div>
 	<div class="form-group">
 		<h3>City: {{model.city}}</h3>
@@ -18,12 +21,77 @@
 	<br>
 	<div class="form-group">
 <!-- 		Work with anthony here to implement ngFor -->
-		<h4>Programming Languages: {{model.langs}}</h4>
+		<h4>Programming Languages: {{langs}}</h4>
 	</div>
 	<br>
 	<div class="form-group">
 	<!-- 		Work with anthony here to implement ngFor -->
-		<h4>Hobbies: {{model.hobbies}}</h4>
+		<h4>Hobbies: {{hobbies}}</h4>
 	</div>
-	<button type="submit" class="btn btn-link">Edit</button>
+	<div class="form-group">
+		
+	<button type="submit" (click)="setEdit()" class="btn btn-primary">Edit</button>
+	</div>
 </div>
+
+
+
+
+	<div class="container">
+		
+	<form *ngIf=editing() class="formCont" (ngSubmit)="onSubmit()" #createForm="ngForm">
+		<h1>Update</h1>
+		<div class="row">
+			<div class="col-sm-6">
+				
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name">
+				</div>
+				<div class="form-group">
+					<label for="gender">Gender</label>
+					<select class="form-control" id="gender" name="gender" [(ngModel)]="model.gender">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="prefgender">Preferred Gender</label>
+					<select class="form-control" id="prefGender" name="prefGender" [(ngModel)]="model.prefgender">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="age">Age</label>
+					<input type="number" class="form-control" id="age" name="age" [(ngModel)]="model.age">
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="city">city</label>
+					<input type="text" class="form-control" id="city" name="city" [(ngModel)]="model.city">
+				</div>
+				<div class="form-group">
+					<label for="about">About</label>
+					<input type="text" class="form-control" id="about" name="about" [(ngModel)]="model.about">
+				</div>
+				<div class="form-group">
+					<label for="imglink">Link for Profile Picture</label>
+					<input type="text" class="form-control" id="imglink" name="imglink" [(ngModel)]="model.imglink">
+				</div>
+
+				<div class="form-group">
+					<label for="langs">Languages</label>
+	<!-- 				ngModelChange gets called whenever there is a change in the input -->
+					<input type="text" class="form-control" id="langs" name="langs" [(ngModel)]="langs" (ngModelChange)="split()">
+				</div>
+				<div class="form-group">
+					<label for="hobbies">Hobbies</label>
+					<input type="text" class="form-control" id="hobbies" name="hobbies" [(ngModel)]="hobbies" (ngModelChange)="split()">
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-success">Submit</button>
+	</form>
+	</div>
