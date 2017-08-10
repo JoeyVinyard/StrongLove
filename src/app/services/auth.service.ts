@@ -52,12 +52,6 @@ export class FirebaseService{
 	}
 
 	queryByUser(uid, callback, comp){
-			// var queryResult = []	
-			// var self = this
-			// this..database.ref('/users').orderByChild('uid').equalTo(userId).on("value", function(snapshot){
-			// 	console.log(snapshot.val())
-			// 	callback(snapshot.val())
-			// })
 			console.log(uid);
 			this.afd.database.ref('/users').orderByChild('uid').equalTo(uid).on("value", function(snapshot){
 				console.log(snapshot.val())
