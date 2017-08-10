@@ -1,3 +1,20 @@
 div .form-group {
 	text-align: center;
 }
+
+.center-div
+{
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+.profpic{
+	border-radius: 50%;
+}
