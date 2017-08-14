@@ -37,9 +37,9 @@
 
 
 
-	<div class="container">
+	<div *ngIf=editing() class="container">
 		
-	<form *ngIf=editing() class="formCont" (ngSubmit)="onSubmit()" #createForm="ngForm">
+	<form class="formCont" (ngSubmit)="onSubmit()" #createForm="ngForm">
 		<h1>Update</h1>
 		<div class="row">
 			<div class="col-sm-6">
@@ -69,7 +69,7 @@
 			</div>
 			<div class="col-sm-6">
 				<div class="form-group">
-					<label for="city">city</label>
+					<label for="city">City</label>
 					<input type="text" class="form-control" id="city" name="city" [(ngModel)]="model.city">
 				</div>
 				<div class="form-group">
@@ -92,6 +92,8 @@
 				</div>
 			</div>
 		</div>
-		<button type="submit" class="btn btn-success">Submit</button>
+		<div class="form-group">
+			<button type="submit" class="btn btn-success">Save</button>
+		</div>
 	</form>
 	</div>

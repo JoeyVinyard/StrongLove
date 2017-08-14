@@ -1,6 +1,7 @@
 h1{
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 60px;
+	text-shadow: 1px 1.5px 0 black;
 }
 .splash-text{
 	padding-top: 2vh;
@@ -10,6 +11,8 @@ h1{
 	background-color: rgba(245,210,255, .6);
 	padding-left: 15px;
 	padding-right: 15px;
+	border: 2px solid #61386b;
+	box-shadow: 2.5px 2.5px 6.5px #61386b;
 }
 .signupWindow{
 	padding-top: 2vh;
@@ -23,4 +26,7 @@ h1{
 .signupForm{
 	padding-top: 20px;
 	width: 100%;
+}
+.form-group {
+	color: #61386b;
 }
