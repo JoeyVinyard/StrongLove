@@ -76,7 +76,7 @@
     font-size: 16px;
     line-height: 20px;
     color: #61386b;
-    text-shadow: 0 0.5px 0 rgba(196, 168, 204, 0.56);
+    text-shadow: 0 0.5px 0 white;
     text-overflow: ellipsis;
 }
 .card.hovercard .bottom {
