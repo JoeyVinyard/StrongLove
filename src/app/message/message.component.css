@@ -1,48 +1,61 @@
 h1 {
-	margin-left: 25px;
+	margin-left: 45px;
+	text-shadow: 1px 1px 1px black;
 }
 .sidebar {
 	width: 350px;
 	height: 650px;
 	margin-left: 25px;
 	float: left;
-	background-color: #73437F;
-	border: 2px solid black;
-	border-radius: 2.0em;
+	background-color: rgba(97, 56, 107, 0.7);
+	border: 1px solid black;
+	border-radius: 1em;
+	box-shadow: 1.5px 1.5px 5.5px black;
+}
+.connection {
+	width: 320px;
+	height: 100px;
+	border: 1px solid black;
+	border-radius: 1em;
+	background-color: rgba(245, 210, 255, 0.8);
+	margin: auto;
+	margin-top: 15px;
 }
 img {
-	float: left;
-	margin-left: 25px;
-	margin-top: 25px;
-	border: 1.5px solid black;
+	margin-left: 6px;
+	margin-top: 6px;
+	border: 2px solid black;
 	border-radius: 50%;
 }
 h4 {
-	float: center;
+	float: right;
 	text-align: center;
-	margin-top: 55px;
-	color: #EBA0FF;
+	margin-top: 40px;
+	margin-right: 150px;
+	color: #73437F;
 }
 h3 {
-	color: #EBA0FF;
-	margin-left: 25px;
+	color: #F5D2FF;
+	text-align: center;
+	text-shadow: 1px 1px 1px black;
 }
 .main {
 	float: center;
 	margin-left: 400px;
 	width: 1000px;
 	height: 650px;
-	background-color: #73437F;
-	border: 2px solid black;
-	border-radius: 2.0em;
+	background-color: rgba(97, 56, 107, 0.7);
+	border: 1px solid black;
+	border-radius: 1em;
+	box-shadow: 1.5px 1.5px 5.5px black;
 }
 .chatarea {
 	margin-left: 25px;
 	margin-right: 25px;
 	height: 540px;
-	background-color: #F5D2FF;
+	background-color: rgba(245, 210, 255, 0.8);
 	border: 2px solid black;
-	border-radius: 1.5em;
+	border-radius: 1em;
 }
 input {
 	float: left;
@@ -52,7 +65,6 @@ input {
 	height: 30px;
 	border: 1px solid black;
 	border-radius: 0.5em;
-	background-color: #F5D2FF;
 }
 button {
 	float: center;
