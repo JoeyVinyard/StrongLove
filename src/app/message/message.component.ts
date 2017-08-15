@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../services/users.service'
 
 @Component({
   selector: 'app-message',
   templateUrl: './message.component.html',
   styleUrls: ['./message.component.css']
 })
-export class MessageComponent implements OnInit {
+export class MessageComponent{
+	matches;
+	matchesPromise;
 
-  constructor() { }
+	setMatches(matches, component){
+		component.matchesPromise = new Promise((resolve, reject) => {
+			resolve(matches);
+		});
+	}
 
-  ngOnInit() {
+  constructor(private us: UsersService) {
+	 this.us.getMatches(this.setMatches, this);
   }
+
+
 
 }

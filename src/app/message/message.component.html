@@ -1,9 +1,12 @@
 <h1>Your Connections:</h1>
 <div class="sidebar">
-	<a href="#">
-		<img src="" width="85px" height="85px">
-		<h4>FirstName LastName</h4>
-	</a>
+	<div>
+		<a href="#" *ngFor="let match of matchesPromise | async">
+			<img src="{{match.imglink}}" width="85px" height="85px">
+			<h4>{{match.name}}</h4>
+		</a>
+		
+	</div>
 </div>
 <div class="main">
 	<h3>Chat</h3>
