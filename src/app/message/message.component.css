@@ -20,7 +20,16 @@ h1 {
 	background-color: rgba(245, 210, 255, 0.5);
 	margin: auto;
 	margin-top: 8px;
+
 }
+
+.connectionBar{
+    margin: 14px 2px 0px 0;
+    overflow: auto;
+    height: 95%;
+    border-radius: 10px;
+}
+
 img {
 	margin-left: 6px;
 	margin-top: 6px;
