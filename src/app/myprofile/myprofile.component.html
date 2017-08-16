@@ -31,7 +31,7 @@
 	<div class="form-group">
 	<br>
 	<div class="form-group">
-		<h4>Contact Email: {{model.contact}}</h4>
+		<h4>Github: {{model.contact}}</h4>
 	</div>
 		
 	<button type="submit" (click)="setEdit()" class="btn btn-primary">Edit</button>
@@ -95,7 +95,7 @@
 					<input type="text" class="form-control" id="hobbies" name="hobbies" [(ngModel)]="hobbies" (ngModelChange)="split()">
 				</div>
 				<div class="form-group">
-					<label for="contact">Contact Email</label>
+					<label for="contact">Github</label>
 					<input type="text" class="form-control" id="contact" name="contact" [(ngModel)]="model.contact">
 				</div>
 			</div>

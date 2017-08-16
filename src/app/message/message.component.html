@@ -15,12 +15,15 @@
 	</div>
 </div>
 <div class="main">
-	<h3>faioljwepofj</h3>
+	<h3>Connect</h3>
 	
 	<div class="chatarea">
-		<div *ngIf="currentUser">
-			<div >Contact Me!</div>
-			<div>{{currentUser.name}}</div>
+		<div class="container" *ngIf="currentUser">
+			<h2>Find Me on Github!</h2>
+			<h2>{{currentUser.contact}}</h2>
+		</div>
+		<div class="container" *ngIf="!currentUser">
+			<h2>Click on a Connection!</h2>
 		</div>
 	</div>
 	
