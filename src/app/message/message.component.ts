@@ -16,6 +16,16 @@ export class MessageComponent{
 		});
 	}
 
+	populateChat(recipient){
+
+	}
+
+	sendMessage(){
+
+	}
+
+	
+
   constructor(private us: UsersService) {
 	 this.us.getMatches(this.setMatches, this);
   }

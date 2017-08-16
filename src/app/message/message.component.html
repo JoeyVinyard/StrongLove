@@ -1,10 +1,16 @@
 <h1>Your Connections:</h1>
 <div class="sidebar">
-	<div class="connection">
-		<a href="#" *ngFor="let match of matchesPromise | async">
+	<div>
+		<div class="connection" *ngFor="let match of matchesPromise | async">
+			<a href="/user/{{match.username}}">
+				
 			<img src="{{match.imglink}}" width="85px" height="85px">
+			</a>
+			<a href="">
 			<h4>{{match.name}}</h4>
-		</a>
+				
+			</a>
+		</div>
 		
 	</div>
 </div>
