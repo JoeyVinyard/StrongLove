@@ -9,18 +9,24 @@ import { UsersService } from '../services/users.service'
 export class MessageComponent{
 	matches;
 	matchesPromise;
+	currentUser;
 
 	setMatches(matches, component){
 		component.matchesPromise = new Promise((resolve, reject) => {
+			component.matches = matches;
 			resolve(matches);
 		});
 	}
 
-	populateChat(recipient){
+	showUser(uid){
+		this.currentUser=this.matches.find(function(match){
+			return match.uid==uid;
+		})
+		console.log(this.currentUser)
 
 	}
 
-	sendMessage(){
+	populateField(uid){
 
 	}
 

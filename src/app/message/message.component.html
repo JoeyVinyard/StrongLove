@@ -4,21 +4,25 @@
 		<div class="connection" *ngFor="let match of matchesPromise | async">
 			<a href="/user/{{match.username}}">
 				
-			<img src="{{match.imglink}}" width="85px" height="85px">
+				<img src="{{match.imglink}}" width="85px" height="85px">
 			</a>
-			<a href="">
-			<h4>{{match.name}}</h4>
-				
+
+			<a>
+				<h4 (click)="showUser(match.uid)">{{match.name}}</h4>
 			</a>
 		</div>
 		
 	</div>
 </div>
 <div class="main">
-	<h3>Chat</h3>
+	<h3>faioljwepofj</h3>
+	
 	<div class="chatarea">
-		<p>....</p>
+		<div *ngIf="currentUser">
+			<div >Contact Me!</div>
+			<div>{{currentUser.name}}</div>
+		</div>
 	</div>
-	<input type="text" placeholder="Enter your message here...">
-	<button type="submit" class="btn btn-success">Send</button>
+	
+	
 </div>
