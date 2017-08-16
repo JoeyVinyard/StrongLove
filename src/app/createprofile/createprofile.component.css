@@ -6,13 +6,13 @@
 	background-color: rgba(245,210,255, .6);
 	margin-left: 20px;
 	margin-right: 20px;
-	border: 2px solid #61386b;
-	border-radius: 0.5%;
+	border: 1.5px solid #61386b;
+	border-radius: 0.5em;
 	box-shadow: 1.5px 1.5px 5.5px #61386b;
 }
 h1 {
 	text-align: center;
-	text-shadow: 0.5px 1.5px 0 black;
+	text-shadow: 1px 1px 1px black;
 }
 .form-group {
 	color: #61386b;

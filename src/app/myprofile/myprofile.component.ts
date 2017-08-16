@@ -28,7 +28,7 @@ export class MyprofileComponent{
 		console.log(prof, comp);
 		comp.model = new Profile(prof.uid, prof.username, prof.name,
 		prof.gender, prof.imglink, prof.about, prof.city, prof.hobbies,
-		prof.age, prof.langs, prof.prefgender);
+		prof.age, prof.langs, prof.prefgender, prof.contact);
 		comp.hobbies = comp.model.hobbies.join(" ");
 		comp.langs = comp.model.langs.join(" ");
 		console.log(comp.hobbies);
@@ -55,7 +55,7 @@ export class MyprofileComponent{
 	onSubmit(){
 		this.us.updateUser(new Profile(this.as.getUid(), this.model.username, this.model.name, this.model.gender,
 		 this.model.imglink, this.model.about, this.model.city, this.model.hobbies,
-		 this.model.age, this.model.langs, this.model.prefgender));
+		 this.model.age, this.model.langs, this.model.prefgender, this.model.contact));
 		this.setEdited();
 	}
 	

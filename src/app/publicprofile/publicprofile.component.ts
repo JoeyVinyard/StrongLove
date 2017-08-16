@@ -23,7 +23,7 @@ export class PublicprofileComponent {
       this.route.params.subscribe((params) => {
           this.us.getUserInfo(params.id).then((prof) => {
             //todo replace blank string
-            this.modelProfile = new Profile("", prof.username, prof.name, prof.gender, prof.imglink, prof.about, prof.city, prof.hobbies, prof.age, prof.langs, prof.prefgender);
+            this.modelProfile = new Profile("", prof.username, prof.name, prof.gender, prof.imglink, prof.about, prof.city, prof.hobbies, prof.age, prof.langs, prof.prefgender, prof.contact);
             this.hobbies = prof.hobbies;
             this.langs = prof.langs;
         })

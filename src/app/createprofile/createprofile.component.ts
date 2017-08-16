@@ -23,7 +23,18 @@ export class CreateprofileComponent{
 	}
 	onSubmit(){
 		//TODO replace blank string
-		this.us.createUser(new Profile(this.as.getUid(), this.model.username, this.model.name, this.model.gender, this.model.imglink, this.model.about, this.model.city, this.model.hobbies, this.model.age, this.model.langs, this.model.prefGender));
+		this.us.createUser(new Profile(this.as.getUid(), 
+			this.model.username, 
+			this.model.name, 
+			this.model.gender, 
+			this.model.imglink, 
+			this.model.about, 
+			this.model.city, 
+			this.model.hobbies, 
+			this.model.age, 
+			this.model.langs, 
+			this.model.prefGender,
+			this.model.contact));
 	}
 
 	constructor(private us: UsersService, private as: FirebaseService) { }
