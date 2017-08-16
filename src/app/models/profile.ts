@@ -9,5 +9,7 @@ export class Profile{
 					public hobbies: string[],
 					public age: number,
 					public langs: string[],
-					public prefgender: string){}
+					public prefgender: string,
+					public contact: string){}
+
 }

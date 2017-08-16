@@ -33,7 +33,8 @@ export class CreateprofileComponent{
 			this.model.hobbies, 
 			this.model.age, 
 			this.model.langs, 
-			this.model.prefGender));
+			this.model.prefGender,
+			this.model.contact));
 	}
 
 	constructor(private us: UsersService, private as: FirebaseService) { }
