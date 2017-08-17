@@ -17,3 +17,8 @@ h1 {
 .form-group {
 	color: #61386b;
 }
+
+.userError{
+	color: #db0505;
+	font-weight: bold;
+}
