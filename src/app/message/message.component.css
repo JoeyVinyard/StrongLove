@@ -23,6 +23,12 @@ h1 {
 
 }
 
+span h4{
+	overflow: hidden;
+	text-align: center;
+	margin: 40px 55px 0px 0px;
+}
+
 .connectionBar{
     margin: 14px 2px 0px 0;
     overflow: auto;
