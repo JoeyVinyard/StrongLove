@@ -10,7 +10,7 @@ export class UsersService{
 	createUser(p: Profile){
 		this.afd.database.ref('users/' + p.username).set(p)
 		.then(() => {
-			this.router.navigateByUrl('/myprofile');
+			this.router.navigateByUrl('/');
 		})
 		.catch((error) => {
 			console.log(error);

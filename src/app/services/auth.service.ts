@@ -26,7 +26,7 @@ export class FirebaseService{
 		this.af.auth.setPersistence('local').then(() => {
 			this.af.auth.signInWithEmailAndPassword(user.email, user.password)
 			.then(() => {
-				this.router.navigateByUrl('/myprofile');
+				this.router.navigateByUrl('/');
 			})
 			.catch((error) => {
 				console.log(error);

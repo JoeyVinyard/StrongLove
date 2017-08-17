@@ -25,7 +25,7 @@ export class CreateprofileComponent{
 	onSubmit(){
 		//TODO replace blank string
 		this.us.checkIfUserTaken(this.model.username).then((exists)=>{
-			console.log("fuckkkkkkk", exists);
+			console.log("yep", exists);
 			if(exists){
 				this.error=true;
 				console.warn("username taken bruh");
