@@ -20,8 +20,12 @@
 	<div class="chatarea">
 		<div class="container" *ngIf="currentUser">
 			<h2>Find Me on Github!</h2>
+			<hr>
+			<h2>{{currentUser.name}}</h2>
 			<h2>{{currentUser.contact}}</h2>
-			<h2>Click my picture to view my profile!</h2>
+			<br/>
+			<hr>
+			<a href="/user/{{currentUser.username}}">View my Profile!</a>
 		</div>
 		<div class="container" *ngIf="!currentUser">
 			<h2>Click on a Connection!</h2>

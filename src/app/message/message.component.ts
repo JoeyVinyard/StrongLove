@@ -30,6 +30,10 @@ export class MessageComponent{
 
 	}
 
+	goToGitHub(location) {
+    window.location.href='location';
+}
+
 	
 
   constructor(private us: UsersService) {
