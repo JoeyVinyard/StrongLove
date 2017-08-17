@@ -7,7 +7,7 @@ h1 {
 	height: 650px;
 	margin-left: 25px;
 	float: left;
-	background-color: rgba(97, 56, 107, 0.7);
+	background-color: rgba(97, 56, 107, 0.8);
 	border: 1px solid black;
 	border-radius: 1em;
 	box-shadow: 1.5px 1.5px 5.5px black;
@@ -59,7 +59,7 @@ h2 {
 	margin-left: 400px;
 	width: 1000px;
 	height: 650px;
-	background-color: rgba(97, 56, 107, 0.7);
+	background-color: rgba(97, 56, 107, 0.8);
 	border: 1px solid black;
 	border-radius: 1em;
 	box-shadow: 1.5px 1.5px 5.5px black;
