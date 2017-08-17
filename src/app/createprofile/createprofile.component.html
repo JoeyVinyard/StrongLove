@@ -5,6 +5,9 @@
 			<div class="form-group">
 				<label for="username">Username</label>
 				<input type="text" class="form-control" id="username" name="username" [(ngModel)]="model.username">
+ 			<div class="userError" *ngIf="error">
+ 				Username Taken: Please enter a different username
+ 			</div>
 			</div>
 			<div class="form-group">
 				<label for="name">Name</label>

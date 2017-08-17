@@ -19,6 +19,12 @@ export class UsersService{
 		//TODO: Add promise here to catch for errors, and to redirect to matches or something
 
 	}
+	checkIfUserTaken(username: string){
+		return this.afd.database.ref('users/'+username).once('value').then(function(s){
+			console.log("aaaaaaaaaaaaaaa",s.val());
+			return !!s.val();
+		})
+	}
 	updateUser(p: Profile){
 		console.log(p);
 		this.afd.database.ref('users/' + p.username).update(p)
