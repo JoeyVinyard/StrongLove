@@ -31,6 +31,10 @@
 				<label for="age">Age</label>
 				<input type="number" class="form-control" id="age" name="age" [(ngModel)]="model.age">
 			</div>
+			<div class="form-group">
+				<label for="contact">Github Link(http...)</label>
+				<input type="text" class="form-control" id="contact" name="contact" [(ngModel)]="model.contact">
+			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="form-group">
@@ -55,10 +59,7 @@
 				<label for="hobbies">Hobbies</label>
 				<input type="text" class="form-control" id="hobbies" name="hobbies" (ngModelChange)="split()" [(ngModel)]="hobbies">
 			</div>
-			<div class="form-group">
-				<label for="contact">Github Link(http...)</label>
-				<input type="text" class="form-control" id="contact" name="contact" [(ngModel)]="model.contact">
-			</div>
+			
 		</div>
 	</div>
 	<button type="submit" class="btn btn-success">Submit</button>
