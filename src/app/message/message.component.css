@@ -79,7 +79,9 @@ h2 {
 	border-radius: 1em;
 }
 .container {
-	margin: auto;
+	
+	max-width: 95%;
+	text-align: center;
 }
 input {
 	float: left;
